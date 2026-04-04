@@ -1,0 +1,10 @@
+description = "Manage and change Slidev themes"
+prompt = """
+I want to change the visual theme of my presentation.
+1. Without answering right away, analyze the user's request. If no theme is specified, propose 3-4 popular official Slidev themes (like 'seriph', 'apple-basic', 'purdue', 'default').
+2. Once the user selects a theme or if a theme was already provided in the original request, change the 'theme: ' property in the frontmatter of 'slides.md' or the active presentation markdown file.
+3. Keep the file's current frontmatter variables intact, only modifying or adding 'theme: <selected-theme>'.
+4. Warn the user that some themes may require running 'npm install' or that Slidev might download them automatically when recompiling.
+
+User specific request: {{args}}
+"""
