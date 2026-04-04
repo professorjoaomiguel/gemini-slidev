@@ -11,6 +11,12 @@ A professional Gemini CLI extension for creating, editing, and managing [Slidev]
 - **📤 Production Export**: Export to PDF/PNG with support for animation steps (`--with-clicks`).
 - **▶️ Dev Server**: Integrated control for starting the local preview server.
 
+### 🚀 Coming Soon (Fase 2)
+
+- **Vue Components Creator:** Automatically generate `/components/Name.vue` files for richer visuals.
+- **Auto-Speaker Notes:** AI will write robust presenter notes directly as HTML comments.
+- **Web Export & Deploy:** One-click `slidev build` and automated deployments.
+
 ## 📋 Prerequisites
 
 1. **Gemini CLI** installed and configured
@@ -31,13 +37,13 @@ gemini extensions install https://github.com/professorjoaomiguel/gemini-slidev-e
 
 Restart the Gemini CLI. The following commands will be available:
 
-- `/slidev.init` - Initialize a new Slidev project
-- `/slidev.generate` - Generate complete slide decks from topics
-- `/slidev.add` - Add new slides with specific layouts
-- `/slidev.edit` - Refine content and styles
-- `/slidev.export` - Export presentation to PDF/PNG
-- `/slidev.run` - Start the local development server
-- `/slidev.help` - Show help for the Slidev extension
+- `/slidev:init` - Initialize a new Slidev project
+- `/slidev:generate` - Generate complete slide decks from topics
+- `/slidev:add` - Add new slides with specific layouts
+- `/slidev:edit` - Refine content and styles
+- `/slidev:export` - Export presentation to PDF/PNG
+- `/slidev:run` - Start the local development server
+- `/slidev:help` - Show help for the Slidev extension
 - `/slidev` - Main entry point
 
 ## 💡 Usage
@@ -49,42 +55,42 @@ The extension provides a suite of commands for the entire presentation lifecycle
 **Initialize Project:**
 
 ```bash
-/slidev.init
+/slidev:init
 # "Initialize a new project with the 'seriph' theme"
 ```
 
 **Generate Content:**
 
 ```bash
-/slidev.generate "Deep Learning Fundamentals"
+/slidev:generate "Deep Learning Fundamentals"
 # Generates a structured deck with cover, intro, key concepts, and summary
 ```
 
 **Add Slides:**
 
 ```bash
-/slidev.add "Comparison of React vs Vue"
+/slidev:add "Comparison of React vs Vue"
 # Adds a 'two-cols' layout slide comparing the frameworks
 ```
 
 **Edit & Refine:**
 
 ```bash
-/slidev.edit "Make the title on slide 3 bigger and red"
+/slidev:edit "Make the title on slide 3 bigger and red"
 # Applies 'text-4xl text-red-500' classes using UnoCSS
 ```
 
 **Export:**
 
 ```bash
-/slidev.export --format pdf --with-clicks
+/slidev:export --format pdf --with-clicks
 # Exports a PDF including all animation steps
 ```
 
 **Run Server:**
 
 ```bash
-/slidev.run
+/slidev:run
 # Starts the dev server at http://localhost:3030
 ```
 
@@ -129,7 +135,11 @@ Changes to your code are immediately available in the CLI after you restart the 
 ## 🩺 Troubleshooting
 
 - **Extension not loading:** If your extension doesn't appear in `/extensions list`, ensure the `gemini-extension.json` is valid and the CLI has been restarted.
-- **Command conflicts:** Remember that user and project commands take precedence over extension commands. Use the prefixed name (e.g., `/slidev.init`) to verify the extension's version. Run `/help` to see a list of all available commands and their sources.
+- **Command conflicts:** Remember that user and project commands take precedence over extension commands. Use the prefixed name (e.g., `/slidev:init`) to verify the extension's version. Run `/help` to see a list of all available commands and their sources.
+
+## 🙌 Acknowledgments
+
+This project (formerly `gemini-slidev-extension-contrib`) evolved into its own independent Pro version, but its architectural concept for custom commands was heavily inspired by the experimental extension from **QIanGua**. We honor their original work as part of our foundation.
 
 ## 🤝 Contributing
 
