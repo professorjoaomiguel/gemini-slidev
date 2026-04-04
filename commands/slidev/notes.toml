@@ -1,0 +1,28 @@
+description = "Create or update presenter notes for slides"
+prompt = """
+I want to add or update presenter notes for the presentation.
+
+1. **Pre-check**:
+   - Verify if 'slides.md' exists in the current directory.
+   - If missing, inform me that no presentation was found.
+
+2. **Analysis**:
+   - Read 'slides.md' to understand the slides.
+   - If I did not specify which slide, ask me which slide needs notes, or if I want notes generated for all slides.
+
+3. **Generation Rules**:
+   - You MUST generate the presenter notes strictly in **ENGLISH**.
+   - Presenter notes must be placed at the very end of the slide content, but before the slide separator (`---`) if there is one.
+   - Use the markdown comment syntax for the notes:
+     ```markdown
+     <!--
+     [Your presenter notes in English here]
+     -->
+     ```
+   - Make the notes concise but comprehensive enough to guide the presenter.
+
+4. **Action**:
+   - Update 'slides.md' adding the generated notes to the requested slides.
+
+User specific request: {{args}}
+"""
