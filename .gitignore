@@ -5,3 +5,6 @@ dist
 
 # Local Dev AI Context
 /docs/
+.gemini/*
+!.gemini/GEMINI.md
+management/
