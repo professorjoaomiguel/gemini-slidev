@@ -16,12 +16,14 @@ A professional Gemini CLI extension for creating, editing, and managing [Slidev]
 - **Vue Components Creator:** Automatically generate `/components/Name.vue` files for richer visuals.
 - **Auto-Speaker Notes:** AI will write robust presenter notes directly as HTML comments.
 - **Web Export & Deploy:** One-click `slidev build` and automated deployments.
+- **Agent Skills Migration:** Converting global context to robust `skills/slidev/SKILL.md` (Slidev v52+ standard).
+- **Auto format:** Exposure of the new `/slidev:format` CLI feature.
 
 ## 📋 Prerequisites
 
-1. **Gemini CLI** installed and configured
-2. **Node.js 18+** and npm/pnpm/yarn
-3. **Slidev** (will be installed automatically in new projects)
+1. **Gemini CLI** installed and configured (requires Node.js 18+)
+2. **Slidev Environment** requires **Node.js 20.12.0+** and npm/pnpm/yarn
+3. **Slidev** (targets version **v52.14.1+**, installed automatically in new projects)
 
 ## 🚀 Installation
 

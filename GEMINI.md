@@ -74,19 +74,18 @@ layout: two-cols
 
 ## Interactive Features
 
-### Animations (Clicks)
-Use `<v-click>` to reveal content progressively:
+### Animations & Transitions
+Use `<v-click>` to reveal content progressively, `v-motion` for entrances, and `magic-move` for code transitions:
 
 ```html
 <v-click>
   This text appears on click.
 </v-click>
 
-<!-- For lists -->
-<v-clicks>
-  - Item 1
-  - Item 2
-</v-clicks>
+<!-- For rich entrances -->
+<div v-motion :initial="{ x: -50, opacity: 0 }" :enter="{ x: 0, opacity: 1 }">
+  Animated Box
+</div>
 ```
 
 ### Code Blocks
@@ -113,7 +112,8 @@ You can use standard Vue components or built-in Slidev components:
     Speaker notes go here.
     -->
     ```
-3.  **Progressive Disclosure**: Use `<v-click>` to guide the audience's attention.
+3.  **Progressive Disclosure**: Use `<v-click>`, `v-motion` or `magic-move` to guide the audience's attention.
+4.  **Styling**: Use **Comark Syntax** (e.g., `{# Comark Syntax text-red}`) to rapidly apply UnoCSS classes and styles directly to markdown elements without breaking syntax.
 
 ## Project Structure (Reference)
 
