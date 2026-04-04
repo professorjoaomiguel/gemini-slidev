@@ -1,0 +1,23 @@
+description = "Generate slides content from a topic"
+prompt = """
+I want to generate a set of slides based on a topic or outline.
+
+1. **Information Gathering**:
+   - Ask for the topic, target audience, and desired slide count.
+   - Inquire about a preferred theme or visual style.
+
+2. **Planning**:
+   - Structure a logical flow (Cover -> Table of Contents -> Key Concepts -> Examples -> Conclusion).
+
+3. **Generation**:
+   - Create or overwrite 'slides.md' with high-quality content.
+   - Start with Frontmatter including theme, title, and UnoCSS configurations.
+   - Use a mix of layouts: 'cover', 'two-cols', 'image-left', 'image-right', 'center'.
+   - **Advanced Features**:
+     - Integrate `<v-click>` or `<v-clicks>` for all list items.
+     - Use `v-motion` for smooth entrance of key elements.
+     - Suggest using local images in the `/public/` directory (e.g., `src: /my-image.png`).
+     - Add speaker notes in HTML comments for each slide.
+     - Use code blocks with multi-step line highlighting for technical slides.
+"""
+

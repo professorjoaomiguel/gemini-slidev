@@ -1,0 +1,8 @@
+{
+  "identifier": "slidev-assistant",
+  "name": "slidev",
+  "description": "Professional Gemini CLI extension for creating, editing, and managing Slidev presentations with AI-assisted workflows.",
+  "version": "0.5.0",
+  "entryPoint": "GEMINI.md",
+  "excludeTools": ["run_shell_command(rm -rf *)"]
+}

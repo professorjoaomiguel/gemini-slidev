@@ -1,0 +1,22 @@
+description = "Create, edit, and manage Slidev presentations using natural language prompts."
+prompt = """
+Please use the available Slidev subcommands to help the user with presentation tasks based on their natural language request.
+
+Analyze the user request and determine the most appropriate subcommand:
+
+- For initializing a new project: use `/slidev.init`
+- For generating content from a topic/outline: use `/slidev.generate`
+- For adding a new slide: use `/slidev.add`
+- For editing existing slides or styles: use `/slidev.edit`
+- For exporting the presentation (PDF/PNG): use `/slidev.export`
+- For starting the development server: use `/slidev.run`
+
+Be intelligent about interpreting the user's intent. For example:
+- "Create a new deck about AI" -> `/slidev.generate`
+- "Start the server" -> `/slidev.run`
+- "Add a slide about features" -> `/slidev.add`
+- "Save as PDF" -> `/slidev.export`
+
+User request: {{args}}
+"""
+

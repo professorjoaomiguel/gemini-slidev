@@ -1,0 +1,21 @@
+description = "Edit existing slides"
+prompt = """
+I want to modify the existing slides.
+
+1. **Pre-check**:
+   - Verify if 'slides.md' exists in the current directory.
+   - If missing, advise me to create it first using '/slidev:generate' or '/slidev:init'.
+
+2. **Analysis**:
+   - Read 'slides.md' to understand the current content, theme, and structure.
+
+3. **Refinement**:
+   - Ask specifically what changes to make (styling, content, refactoring).
+   - Suggest applying UnoCSS classes for styling (e.g., 'text-blue-500', 'flex', 'grid', 'font-serif').
+   - Recommend adding animations (<v-click>, v-motion, <v-clicks>).
+   - Offer to refactor long slides into multiple slides.
+
+4. **Apply Changes**:
+   - Update 'slides.md' precisely, preserving the overall project structure.
+"""
+

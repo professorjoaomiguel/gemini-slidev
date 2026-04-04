@@ -1,0 +1,17 @@
+description = "Add a new slide"
+prompt = """
+I want to append a new slide to the existing presentation.
+
+1. **Pre-check**:
+   - Verify if 'slides.md' exists in the current directory.
+   - If 'slides.md' is missing, inform me and offer to generate a base presentation using '/slidev:generate' if I provide a topic.
+
+2. **Details**:
+   - Ask for the layout (choose from 'default', 'center', 'two-cols', 'image-left', 'image-right', 'quote', 'statement') and content.
+
+3. **Action**:
+   - Append the new slide to 'slides.md' using the '---' separator.
+   - For 'two-cols' layout, remind me to use '::right::' to separate columns.
+   - Encourage using icons (via Iconify, e.g., <carbon:logo-github />) or UnoCSS classes.
+"""
+
