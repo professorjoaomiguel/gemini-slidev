@@ -1,5 +1,7 @@
 description = "Create or update presenter notes for slides"
 prompt = """
+Before starting, activate the 'slidev' skill.
+
 I want to add or update presenter notes for the presentation.
 
 1. **Pre-check**:

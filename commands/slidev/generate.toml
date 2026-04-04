@@ -1,5 +1,7 @@
 description = "Generate slides content from a topic"
 prompt = """
+Before starting, activate the 'slidev' skill.
+
 I want to generate a set of slides based on a topic or outline.
 
 1. **Information Gathering**:
@@ -19,5 +21,6 @@ I want to generate a set of slides based on a topic or outline.
      - Suggest using local images in the `/public/` directory (e.g., `src: /my-image.png`).
      - Add speaker notes in HTML comments for each slide.
      - Use code blocks with multi-step line highlighting for technical slides.
-"""
 
+User specific request: {{args}}
+"""
