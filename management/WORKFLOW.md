@@ -8,8 +8,8 @@
   Para que qualquer IA (Gemini CLI, GitHub Copilot Web/Mobile, Antigravity) opere corretamente, a hierarquia de contexto deve ser
   respeitada:
 
-   1. Agent Skills (`skills/slidev/SKILL.md`): A Fonte Única da Verdade para este projeto, ativada sob demanda. Contém as regras de arquitetura, padrões de código e diretivas do Slidev.
-   2. .github/copilot-instructions.md (O Escudo do Copilot): Um arquivo curto que obriga o Copilot a ler o arquivo de Skill antes de
+   1. GEMINI.md (A Fonte Única da Verdade): Contém as regras de arquitetura, padrões de código e exemplos de prompts.
+   2. .github/copilot-instructions.md (O Escudo do Copilot): Um arquivo curto que obriga o Copilot a ler o GEMINI.md antes de
       qualquer ação.
    3. management/ (O Cérebro Administrativo): Onde os planos de intenção e relatórios de auditoria residem.
 
@@ -25,24 +25,19 @@
 * Dica IA: Se estiver no celular, descreva o problema e peça ao Copilot: "Crie uma Issue no padrão Conventional Commits para este
      problema".
 
-  2. Estratégia (Implementation Plan)
+  1. Estratégia (Implementation Plan)
 
 * Ação: Antes de codar, a IA deve criar um plano em management/plans/feature-name.md.
 * Conteúdo: O plano deve conter: Contexto, Checklist, Detalhes Passo-a-Passo e Critérios de Aceite.
 * Validação: Você revisa o plano. Não há código sem plano aprovado.
 
-  3. Execução (Branch & Code)
+  1. Execução (Branch & Code)
 
 * Ação: Crie uma branch específica (feat/... ou fix/...).
 * Padrão: Use Conventional Commits (ex: feat: add robust check to init command).
-* Blindagem: Se a IA tentar usar TypeScript ou bibliotecas externas, o `SKILL.md` deve ser citado para correção de rota.
+* Blindagem: Se a IA tentar usar TypeScript ou bibliotecas externas, o GEMINI.md deve ser citado para correção de rota.
 
-  4. Validação (Testes)
-
-* Ação: Execute `npm test` antes de enviar o PR.
-* Ferramenta: O repositório usa o **Vitest** (`tests/`) para garantir a integridade dos arquivos e da sintaxe `.toml`.
-
-  5. Revisão e Documentação (PR & Comments)
+  1. Revisão e Documentação (PR & Comments)
 
 * Ação: Abra o Pull Request.
 * Tratamento de Erros: Se uma ideia ou branch falhar, documente o erro no comentário do PR antes de fechá-lo. Isso cria memória
@@ -55,7 +50,7 @@
 
   Copie estes blocos para os respectivos arquivos no novo repositório para manter a blindagem:
 
-  Em `skills/slidev/SKILL.md`:
+  Em GEMINI.md:
 
    1 # AI ASSISTANT INSTRUCTIONS (CRITICAL)
    2 > Este repositório é uma **Gemini CLI Extension**, NÃO uma extensão de VS Code.
@@ -65,7 +60,7 @@
   Em .github/copilot-instructions.md:
 
    1 # Copilot Mandate
-   2 Você DEVE ler e seguir rigorosamente as regras arquiteturais definidas no arquivo `skills/slidev/SKILL.md` deste projeto antes de
+   2 Você DEVE ler e seguir rigorosamente as regras arquiteturais definidas no arquivo `GEMINI.md` na raiz deste projeto antes de
      sugerir qualquer alteração. Este projeto usa TOML para comandos CLI.
 
   ---
