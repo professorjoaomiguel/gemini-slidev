@@ -10,14 +10,15 @@ A professional Gemini CLI extension for creating, editing, and managing [Slidev]
 - **➕ Seamless Addition**: Insert new slides intelligently into existing decks.
 - **📤 Production Export**: Export to PDF/PNG with support for animation steps (`--with-clicks`).
 - **▶️ Dev Server**: Integrated control for starting the local preview server.
+- **🧩 Vue Components Creator**: Automatically generate `/components/Name.vue` files for richer visuals via `/slidev:component`.
+- **🗣️ Auto-Speaker Notes**: AI writes robust presenter notes directly as HTML comments via `/slidev:notes`.
+- **🧹 Auto format**: Exposure of the new `/slidev:format` CLI feature using Prettier.
+- **🧠 Agent Skills Architecture**: Uses robust `skills/slidev/SKILL.md` for context instead of a global context file.
 
-### 🚀 Coming Soon (Fase 2)
+### 🚀 Coming Soon (Fase 3)
 
-- **Vue Components Creator:** Automatically generate `/components/Name.vue` files for richer visuals.
-- **Auto-Speaker Notes:** AI will write robust presenter notes directly as HTML comments.
 - **Web Export & Deploy:** One-click `slidev build` and automated deployments.
-- **Agent Skills Migration:** Converting global context to robust `skills/slidev/SKILL.md` (Slidev v52+ standard).
-- **Auto format:** Exposure of the new `/slidev:format` CLI feature.
+- **Slidev v53+ Features:** Integration with newer Slidev capabilities.
 
 ## 📋 Prerequisites
 
@@ -110,7 +111,7 @@ The extension provides a suite of commands for the entire presentation lifecycle
 
 ### Core Principles
 
-This extension adheres to strict quality standards defined in `GEMINI.md`:
+This extension adheres to strict quality standards defined in its Agent Skill (`skills/slidev/SKILL.md`):
 
 - **Markdown-Centric**: Treats `slides.md` as the source of truth.
 - **Component-Driven**: Leverages Slidev's built-in layouts and Vue components.
@@ -146,6 +147,13 @@ This project (formerly `gemini-slidev-extension-contrib`) evolved into its own i
 ## 🤝 Contributing
 
 1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request
+
+## 📄 Legal
+
+- **License**: [Apache License 2.0](LICENSE)
+
 2. Create a feature branch
 3. Submit a pull request
 
