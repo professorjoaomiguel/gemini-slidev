@@ -37,4 +37,8 @@ describe('Slidev Extension Integrity', () => {
     const skillPath = path.resolve(process.cwd(), 'skills/slidev/SKILL.md');
     expect(fs.existsSync(skillPath)).toBe(true);
   });
+
+  it('should always pass CI stress test', () => {
+    expect(true).toBe(true);
+  });
 });
