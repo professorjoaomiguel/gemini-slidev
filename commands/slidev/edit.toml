@@ -15,6 +15,8 @@ I want to modify the existing slides.
    - Ask specifically what changes to make (styling, content, refactoring).
    - Suggest applying UnoCSS classes for styling (e.g., 'text-blue-500', 'flex', 'grid', 'font-serif').
    - Recommend adding animations (<v-click>, v-motion, <v-clicks>).
+   - **New Feature: Highlighter**:
+     - Suggest using the `v-mark` directive (e.g., `<v-mark color=\"red\">text</v-mark>`) to highlight specific words or sentences.
    - Offer to refactor long slides into multiple slides.
 
 4. **Apply Changes**:

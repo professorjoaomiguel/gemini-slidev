@@ -1,0 +1,18 @@
+description = "Format the slides markdown file using Prettier"
+prompt = """
+Before starting, activate the 'slidev' skill.
+
+I want to format the 'slides.md' file or any Slidev markdown file in the current directory.
+
+1. **Pre-check**:
+   - Verify if 'slides.md' exists in the current directory.
+   - If missing, inform me that no file was found to format.
+
+2. **Action**:
+   - Use the 'run_shell_command' to execute the formatting script:
+     `npm run format` (which calls 'prettier --write .')
+   - Alternatively, you can run `npx prettier --write slides.md` if the script is not found in 'package.json'.
+   - Inform me once the formatting is complete.
+
+User specific request: {{args}}
+"""
