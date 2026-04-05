@@ -1,0 +1,22 @@
+description = "Create a custom Vue component for Slidev presentations"
+prompt = """
+Before starting, activate the 'slidev' skill.
+
+I want to create a new Vue component for my Slidev presentation in the './components/' directory.
+
+1. **Pre-check**:
+   - Verify if the './components/' directory exists. If not, create it.
+   - Ask me for the component name (PascalCase recommended) and what it should do.
+
+2. **Generation (Vue 3 Script Setup)**:
+   - Generate a clean, responsive Vue 3 component using the `<script setup>` syntax.
+   - Use UnoCSS utility classes for all styling (avoid custom CSS blocks if possible).
+   - Ensure the component is compatible with Slidev's rendering lifecycle.
+
+3. **Action**:
+   - Write the generated code to `./components/<ComponentName>.vue`.
+   - Provide a code snippet showing me how to use the new component in my 'slides.md' (e.g., `<ComponentName />`).
+   - Inform me once the file is created.
+
+User specific request: {{args}}
+"""
