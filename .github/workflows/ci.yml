@@ -15,8 +15,8 @@ jobs:
           node-version: '22'
           cache: 'npm'
       - name: Install dependencies
-        run: nm} install
+        run: npm install
       - name: Run Lint
-        run: nm} run lint
+        run: npm run lint
       - name: Run Tests
         run: npx vitest run tests/infrastructure.test.ts tests/format.test.ts tests/component.test.ts
