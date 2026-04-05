@@ -7,6 +7,11 @@ describe('Slidev Command: /slidev:format', () => {
   const testFile = path.resolve(process.cwd(), 'tests/tmp/dirty-slides.md');
 
   beforeEach(() => {
+    // Garante que o diretório temporário exista (essencial para o CI)
+    const tmpDir = path.dirname(testFile);
+    if (!fs.existsSync(tmpDir)) {
+      fs.mkdirSync(tmpDir, { recursive: true });
+    }
     // Conteúdo propositalmente mal formatado
     const dirtyContent = '---\ntheme: seriph\n---\n\n# Slide 1  \n   * Item 1\n* Item 2\n\n\n---  \n\n\n# Slide 2';
     fs.writeFileSync(testFile, dirtyContent);
